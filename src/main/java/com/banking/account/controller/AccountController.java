@@ -14,6 +14,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
+import org.apache.kafka.shaded.io.opentelemetry.proto.metrics.v1.Summary;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -99,6 +100,27 @@ public class AccountController {
         List<AccountResponse> response = accountService.getAccountsByCustomer(customerId);
         return ResponseEntity.ok(response);
     }
+
+    @GetMapping("/by-email/{email}")
+    @Operation(
+            summary = "Get Account details by user email id",
+            description = "Retrieves account for a specific customer by email"
+
+    )
+    @ApiResponses(value={
+            @ApiResponse(
+                    responseCode = "200",
+                    description = "Accounts retrieved successfully"
+            )
+    })
+    public ResponseEntity<List<AccountResponse>> getAccountsByCustomerEmail(
+            @Parameter(description = "Customer Email", example="john.doe@gmail.com")
+            @PathVariable String email) {
+        log.info("Received get accounts request for customer email: {}", email);
+        List<AccountResponse> response = accountService.getAccountByCustomerEmail(email);
+        return ResponseEntity.ok(response);
+    }
+
 
     @PatchMapping("/{accountId}/status")
     @Operation(

@@ -1,0 +1,227 @@
+### Java ###
+*.class
+*.jar
+*.war
+*.ear
+*.nar
+hs_err_pid*
+replay_pid*
+
+### Maven ###
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+.mvn/timing.properties
+.mvn/wrapper/maven-wrapper.jar
+
+### Gradle ###
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### Spring Boot ###
+spring-boot-starter-parent/
+.springBeans
+.sts4-cache/
+
+### Application Logs ###
+logs/
+*.log
+log/
+*.log.*
+application-*.log
+
+### IDE - IntelliJ IDEA ###
+.idea/
+*.iws
+*.iml
+*.ipr
+out/
+.idea_modules/
+*.ids
+*.orig
+
+### IDE - Eclipse ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+bin/
+tmp/
+*.tmp
+*.bak
+*.swp
+*~.nib
+local.properties
+.loadpath
+.recommenders
+
+### IDE - VSCode ###
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+### IDE - NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+
+### OS Files ###
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+### Environment Variables ###
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+application-local.yml
+application-local.properties
+application-dev.yml
+application-dev.properties
+application-secrets.yml
+application-secrets.properties
+
+### Database ###
+*.db
+*.sqlite
+*.h2.db
+
+### Test Coverage ###
+.jacoco/
+jacoco.exec
+coverage/
+
+### Liquibase ###
+# Keep these tracked
+# !src/main/resources/db/changelog/
+# But ignore local liquibase properties if any
+liquibase.properties
+
+### Kafka ###
+kafka-logs/
+zookeeper/
+
+### Sensitive Information ###
+**/application-prod.yml
+**/application-prod.properties
+**/secrets.yml
+**/secrets.properties
+*.pem
+*.key
+*.p12
+*.jks
+*.keystore
+*.truststore
+
+### Build Tools ###
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+### Documentation ###
+# Keep these tracked usually
+# docs/
+
+### Backup Files ###
+*.orig
+*.backup
+*~
+
+### Temporary Files ###
+*.tmp
+*.temp
+*.swp
+*.swo
+.cache/
+
+### Node (if using any frontend build tools) ###
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+### Package Files ###
+*.tar.gz
+*.zip
+*.rar
+
+### JRebel ###
+rebel.xml
+rebel-remote.xml
+
+### SonarQube ###
+.sonar/
+.sonarqube/
+
+### Application Specific ###
+# Uncomment if you generate these
+# src/main/resources/static/
+# src/main/resources/public/
+
+### Docker ###
+# Uncomment if you want to ignore docker-compose override files
+# docker-compose.override.yml
+# .dockerignore
+
+### Kubernetes ###
+# Uncomment to ignore local k8s configs
+# k8s/local/
+# k8s/secrets/
+
+### CI/CD ###
+# Uncomment based on your CI/CD
+# .gitlab-ci.local.yml
+# .jenkins/
+
+### Spring Boot DevTools ###
+.spring-boot-devtools.properties
+
+### H2 Database ###
+*.h2.db
+*.h2.mv.db
+*.h2.trace.db
+
+### PostgreSQL ###
+# Local postgres data
+postgres-data/
+pgdata/
+
+### Redis ###
+dump.rdb
+
+### Generated Files ###
+generated/
+generated-sources/
+generated-test-sources/
+
+### JPA/Hibernate ###
+hibernate.properties
+
+### Actuator ###
+# Uncomment if you want to ignore actuator dumps
+# heapdump
+# threaddump
